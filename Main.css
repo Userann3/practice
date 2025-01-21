@@ -1,0 +1,7 @@
+.home-main{
+    height: 100vh;
+    background-image: url('/home/aaditya-rana/Desktop/practice/pictures/Crafto - The Multipurpose HTML5 Template/demo-restaurant-home-banner-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
