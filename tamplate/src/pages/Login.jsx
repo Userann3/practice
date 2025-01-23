@@ -13,14 +13,14 @@ const Login = () => {
       <div className="flex shadow-lg rounded-lg bg-white">
         {/* Left Section */}
         <div
-          className="w-56 bg-cover rounded-l-lg"
+          className="w-72 bg-cover rounded-l-lg"
           style={{
             backgroundImage:
               'url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")',
           }}
         >
           <svg
-            className="h-10 w-auto m-5"
+            className="h-14 w-auto m-5"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 300 302.5"
             fill="white"
@@ -30,9 +30,9 @@ const Login = () => {
         </div>
 
         {/* Right Section */}
-        <form className="flex flex-col p-8 space-y-4">
-          <h4 className="text-2xl font-semibold text-gray-800">Register Now!</h4>
-          <p className="text-sm text-gray-600">
+        <form className="flex flex-col p-10 space-y-6">
+          <h4 className="text-3xl font-bold text-gray-800">Register Now!</h4>
+          <p className="text-base text-gray-600">
             Create awesome templates with{" "}
             <span className="font-bold text-black">TempGen</span>
           </p>
@@ -105,7 +105,7 @@ const Login = () => {
           >
             Sign Up
           </button>
-          <div>
+          <div className="flex justify-center">
             <span className="underline">
               Already have an account? Login here
             </span>

@@ -13,14 +13,14 @@ const Login = () => {
       <div className="flex shadow-lg rounded-lg bg-white">
         {/* Left Section */}
         <div
-          className="w-56 bg-cover rounded-l-lg"
+          className="w-64 md:w-80 bg-cover rounded-l-lg"
           style={{
             backgroundImage:
               'url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")',
           }}
         >
           <svg
-            className="h-10 w-auto m-5"
+            className="h-14 w-auto m-6"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 300 302.5"
             fill="white"
@@ -30,29 +30,14 @@ const Login = () => {
         </div>
 
         {/* Right Section */}
-        <form className="flex flex-col p-8 space-y-4">
-          <h4 className="text-2xl font-semibold text-gray-800">Welcome back!</h4>
-          <p className="text-sm text-gray-600">
+        <form className="flex flex-col p-10 md:p-12 space-y-6">
+          <h4 className="text-3xl md:text-4xl font-bold text-gray-800">
+            Welcome back!
+          </h4>
+          <p className="text-base md:text-lg text-gray-600">
             Create awesome templates with{" "}
             <span className="font-bold text-black">TempGen</span>
           </p>
-
-          {/* Username Input */}
-          {/* <div className="relative">
-            <div className="flex">
-              <span>
-                <CiUser className="text-2xl mt-3" />
-              </span>
-              <input
-                type="text"
-                name="username"
-                id="username"
-                placeholder="Username"
-                className="peer w-full px-4 py-3 border-b border-gray-300 focus:outline-none focus:border-indigo-500"
-                autoComplete="off"
-              />
-            </div>
-          </div> */}
 
           {/* Email Input */}
           <div className="relative">
@@ -101,12 +86,12 @@ const Login = () => {
 
           <button
             type="submit"
-            className="w-full py-3 text-white bg-indigo-500 rounded-full hover:bg-indigo-600 focus:outline-none"
+            className="w-full py-4 text-white bg-indigo-500 text-lg rounded-full hover:bg-indigo-600 focus:outline-none"
           >
-            Login Up
+            Login
           </button>
           <div className="w-full flex justify-center">
-            <span className="underline">
+            <span className="underline text-sm md:text-base">
               Don't have an account? Signup here
             </span>
           </div>
