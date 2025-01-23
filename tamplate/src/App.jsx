@@ -9,43 +9,19 @@ import card3 from './assets/card3.jpg';
 import ImageSlider from "./component/ImageSlider";
 import footer from './assets/footer.jpg'
 import BenefitsSection from "./component/BenefitsSection";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Template4 from "./component/Template4";
+
 
 const HomePage = () => {
 
   return (
     <div className="bg-gray-50 text-gray-800">
-      {/* Header */}
-      {/* <header className="bg-blue-600 text-white p-6">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">TemplateGen</h1>
-          <nav>
-            <ul className="flex space-x-6">
-              <li><a href="#features" className="hover:underline">Features</a></li>
-              <li><a href="#templates" className="hover:underline">Templates</a></li>
-              <li><a href="#contact" className="hover:underline">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header> */}
+      {/* <Template4/> */}
+      <Login/>
+      {/* <Signup/> */}
 
-      {/* Hero Section */}
-      {/* <section className="flex justify-between items-center bg-white  text-center h-lvh w-full bg-[#fbfbfb]">
-        <div className="1/2 ">
-        <div className="flex flex-col">
-        <span className="text-6xl font-bold text-[#ed8090]">
-        The Ultimate Template Generator 
-        </span>
-        <span className="text-5xl text-[#ed8090]">
-        for Every Need
-        </span>
-        </div>
-        <button className="border text-white py-2 px-5 rounded mt-5 text-2xl bg-[#92d0d4]">
-          Get Started
-        </button>
-        </div>
-        <div style={{ backgroundImage: `url(${bgCrop})` }} className="w-1/2 h-full bg-cover bg-center">
-        </div>
-      </section> */}
             <section id="features" className=" bg-gray-100">
         <div className="w-full h-lvh flex">
           <div style={{ backgroundImage: `url(${bgImg2})` }} className="w-full h-full bg-cover bg-center flex flex-col justify-center items-center">
