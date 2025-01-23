@@ -101,10 +101,14 @@ const Login = () => {
 
           <button
             type="submit"
-            className="w-full py-3 text-white bg-indigo-500 rounded-full hover:bg-indigo-600 focus:outline-none"
+            className="w-full py-3 text-white bg-[#5dc8cf] rounded hover:text-[#5dc8cf] hover:bg-white hover:border-black hover:border transition-all duration-300 hover:duration-300"
           >
             Sign Up
           </button>
+
+          {/* <button className="border text-white py-2 px-5 rounded mt-5 text-2xl bg-[#5dc8cf] hover:text-[#5dc8cf] hover:bg-white hover:border-black transition-all duration-300 hover:duration-300">
+          Get Started
+        </button> */}
           <div className="flex justify-center">
             <span className="underline">
               Already have an account? Login here
