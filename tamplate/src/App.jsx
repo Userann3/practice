@@ -19,8 +19,8 @@ const HomePage = () => {
   return (
     <div className="bg-gray-50 text-gray-800">
       {/* <Template4/> */}
-      <Login/>
-      {/* <Signup/> */}
+      {/* <Login/> */}
+      <Signup/>
 
             <section id="features" className=" bg-gray-100">
         <div className="w-full h-lvh flex">
