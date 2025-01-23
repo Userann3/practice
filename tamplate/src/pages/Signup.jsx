@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CiUser, CiMail, CiLock, CiRead, CiUnread } from "react-icons/ci";
+import login from '../assets/login.jpg'
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -13,10 +14,9 @@ const Login = () => {
       <div className="flex shadow-lg rounded-lg bg-white">
         {/* Left Section */}
         <div
-          className="w-64 md:w-80 bg-cover rounded-l-lg"
+          className="w-96 md:w-80 bg-cover rounded-l-lg"
           style={{
-            backgroundImage:
-              'url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")',
+            backgroundImage:`url(${login})`
           }}
         >
           <svg

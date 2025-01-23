@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CiUser, CiMail, CiLock, CiRead, CiUnread } from "react-icons/ci";
+import card3 from "../assets/signup.jpg";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -13,10 +14,9 @@ const Login = () => {
       <div className="flex shadow-lg rounded-lg bg-white">
         {/* Left Section */}
         <div
-          className="w-72 bg-cover rounded-l-lg"
+          className="w-96 bg-cover rounded-l-lg"
           style={{
-            backgroundImage:
-              'url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")',
+            backgroundImage: `url(${card3})`,
           }}
         >
           <svg
@@ -106,9 +106,6 @@ const Login = () => {
             Sign Up
           </button>
 
-          {/* <button className="border text-white py-2 px-5 rounded mt-5 text-2xl bg-[#5dc8cf] hover:text-[#5dc8cf] hover:bg-white hover:border-black transition-all duration-300 hover:duration-300">
-          Get Started
-        </button> */}
           <div className="flex justify-center">
             <span className="underline">
               Already have an account? Login here
