@@ -12,6 +12,7 @@ import BenefitsSection from "./component/BenefitsSection";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Template4 from "./component/Template4";
+import Templates from './pages/Templates'
 
 
 const HomePage = () => {
@@ -19,6 +20,7 @@ const HomePage = () => {
   return (
     <div className="bg-gray-50 text-gray-800">
       {/* <Template4/> */}
+      <Templates/>
       <Login/>
       <Signup/>
 
@@ -78,67 +80,103 @@ const HomePage = () => {
       <BenefitsSection/>
 
       {/* Footer */}
-      <footer id="contact" className="bg-blue-600 text-black py-10 mt-8 border border-t-black" style={{ backgroundImage: `url(${footer})`}}>
-  <div className="container mx-auto px-4">
-    {/* Top Section */}
-    <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-      {/* Contact Information */}
-      <div className="mb-6 md:mb-0">
-        <h3 className="text-xl font-bold mb-2">Contact Us</h3>
-        <p>Have questions? Reach out to us!</p>
-        <a href="mailto:support@templategen.com" className="underline hover:text-blue-300">
-          support@templategen.com
-        </a>
-      </div>
-
-      {/* Quick Links */}
-      <div className="mb-6 md:mb-0">
-        <h3 className="text-xl font-bold mb-2">Quick Links</h3>
-        <ul>
-          <li>
-            <a href="#features" className="hover:text-blue-300">Features</a>
-          </li>
-          <li>
-            <a href="#about" className="hover:text-blue-300">About Us</a>
-          </li>
-          <li>
-            <a href="#pricing" className="hover:text-blue-300">Pricing</a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-blue-300">Contact</a>
-          </li>
-        </ul>
-      </div>
-
-      {/* Social Media Links */}
-      <div>
-        <h3 className="text-xl font-bold mb-2">Follow Us</h3>
-        <div className="flex justify-center md:justify-start space-x-4">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
-            <i className="fab fa-facebook-f"></i> Facebook
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
-            <i className="fab fa-twitter"></i> Twitter
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">
-            <i className="fab fa-linkedin-in"></i> LinkedIn
+      <footer
+  id="contact"
+  className="bg-black text-black mt-8 border border-t-black"
+  style={{ backgroundImage: `url(${footer})` }}
+>
+  <div className="bg-div bg-black bg-opacity-10 py-10 ">
+    <div className="container mx-auto px-4">
+      {/* Top Section */}
+      <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        {/* Contact Information */}
+        <div className="mb-6 md:mb-0">
+          <h3 className="text-xl font-bold mb-2">Contact Us</h3>
+          <p>Have questions? Reach out to us!</p>
+          <a
+            href="mailto:support@templategen.com"
+            className="underline  "
+          >
+            support@templategen.com
           </a>
         </div>
+
+        {/* Quick Links */}
+        <div className="mb-6 md:mb-0">
+          <h3 className="text-xl font-bold mb-2">Quick Links</h3>
+          <ul>
+            <li>
+              <a href="#features" className=" ">
+                Features
+              </a>
+            </li>
+            <li>
+              <a href="#about" className=" ">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="#pricing" className=" ">
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className=" ">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Social Media Links */}
+        <div>
+          <h3 className="text-xl font-bold mb-2">Follow Us</h3>
+          <div className="flex justify-center md:justify-start space-x-4">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" "
+            >
+              <i className="fab fa-facebook-f"></i> Facebook
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" "
+            >
+              <i className="fab fa-twitter"></i> Twitter
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" "
+            >
+              <i className="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
 
-    {/* Divider */}
-    <div className="border-t border-black my-6"></div>
+      {/* Divider */}
+      <div className="border-t border-black my-6"></div>
 
-    {/* Bottom Section */}
-    <div className="text-center">
-      <p className="text-sm">&copy; 2025 TemplateGen. All rights reserved.</p>
-      <p className="text-sm">
-        Designed with ❤️ by <a href="#" className="underline hover:text-blue-300">TemplateGen Team</a>
-      </p>
+      {/* Bottom Section */}
+      <div className="text-center">
+        <p className="text-sm">&copy; 2025 TemplateGen. All rights reserved.</p>
+        <p className="text-sm">
+          Designed with ❤️ by{" "}
+          <a href="#" className="underline  ">
+            TemplateGen Team
+          </a>
+        </p>
+      </div>
     </div>
   </div>
 </footer>
+
 
     </div>
   );

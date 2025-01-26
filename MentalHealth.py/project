@@ -1,0 +1,85 @@
+import openai
+import pygame
+import pyttsx3
+import time
+
+# OpenAI API Key
+openai.api_key = "YOUR_API_KEY"
+
+# Initialize Text-to-Speech
+engine = pyttsx3.init()
+
+# Initialize Pygame for Animation
+pygame.init()
+screen = pygame.display.set_mode((800, 600))
+pygame.display.set_caption("AI Mental Health Companion")
+font = pygame.font.Font(None, 36)
+
+# Colors
+WHITE = (255, 255, 255)
+BLUE = (135, 206, 235)
+BLACK = (0, 0, 0)
+
+# Function: Get AI Response
+def get_ai_response(user_input):
+    try:
+        response = openai.Completion.create(
+            engine="text-davinci-003",
+            prompt=f"The user feels: {user_input}. Respond empathetically and suggest a mindfulness activity:",
+            max_tokens=100
+        )
+        return response.choices[0].text.strip()
+    except Exception as e:
+        return "Sorry, I'm having trouble responding right now."
+
+# Function: Display Animation
+def play_animation():
+    screen.fill(BLUE)
+    for i in range(10):
+        pygame.draw.circle(screen, WHITE, (400, 300), i * 20, 2)
+        pygame.display.update()
+        time.sleep(0.2)
+
+# Main Loop
+def main():
+    running = True
+    user_input = ""
+    ai_response = "Welcome! How are you feeling today?"
+
+    while running:
+        screen.fill(WHITE)
+
+        # Display AI Response
+        text_surface = font.render(ai_response, True, BLACK)
+        screen.blit(text_surface, (50, 100))
+
+        # Display User Input
+        user_input_surface = font.render(f"You: {user_input}", True, BLACK)
+        screen.blit(user_input_surface, (50, 200))
+
+        # Event Handling
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RETURN:  # Press Enter to send message
+                    ai_response = get_ai_response(user_input)
+                    engine.say(ai_response)  # Text-to-Speech
+                    engine.runAndWait()
+                    user_input = ""
+                elif event.key == pygame.K_BACKSPACE:
+                    user_input = user_input[:-1]
+                else:
+                    user_input += event.unicode
+
+        # Animation
+        play_animation()
+
+        pygame.display.flip()
+        pygame.time.Clock().tick(30)
+
+    pygame.quit()
+
+# Run the Application
+if _name_ == "_main_":
+    main()
